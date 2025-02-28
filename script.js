@@ -12,7 +12,7 @@ document.getElementById('content-generator-form').addEventListener('submit', fun
   const keywords2 = document.getElementById('keywords2').value;
 
   // Generate prompt
-  const prompt = `Buatkan saya ${category} ${style} ${authorStyle} tentang ${about} ${area}, ${wordCount} ${keywords} ${keywords2}.`;
+  const prompt = `Buatkan saya ${category} ${style} ${authorStyle} tentang ${about} ${area} ${wordCount} ${keywords}, ${keywords2}.`;
 
   // Display prompt
   document.getElementById('generated-prompt').textContent = prompt;
