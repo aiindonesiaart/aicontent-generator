@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Content Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>AI Content Generator</h1>
+    <form id="content-generator-form">
+      <!-- Category Selection -->
+      <div class="form-group">
+        <label for="category">Kategori:</label>
+        <select id="category" name="category" required>
+          <option value="">Pilih Kategori</option>
+          <option value="Artikel">Artikel</option>
+          <option value="Copywriting">Copywriting</option>
+        </select>
+      </div>
+
+      <!-- Style Selection -->
+      <div class="form-group">
+        <label for="style">Gaya Tulisan:</label>
+        <select id="style" name="style" required>
+          <option value="">Pilih Gaya Tulisan</option>
+          <option value="Formal">Formal</option>
+          <option value="Kasual">Kasual</option>
+          <option value="Profesional">Profesional</option>
+          <option value="Kreatif">Kreatif</option>
+          <option value="Bahasa santai resmi">Bahasa santai resmi</option>
+          <option value="Bahasa santai tapi baku">Bahasa santai tapi baku</option>
+          <option value="Formal dan ramah">Formal dan ramah</option>
+          <option value="Kreatif dan humoris">Kreatif dan humoris</option>
+          <option value="Cerita dengan fakta ilmiah">Cerita dengan fakta ilmiah</option>
+          <option value="Persuasif formal">Persuasif formal</option>
+          <option value="Informal dengan sopan">Informal dengan sopan</option>
+          <option value="Persuasif kreatif">Persuasif kreatif</option>
+          <option value="Instruksi ramah">Instruksi ramah</option>
+          <option value="Sederhana tapi menyentuh">Sederhana tapi menyentuh</option>
+          <option value="Santai tapi instruktif">Santai tapi instruktif</option>
+          <option value="Resmi tapi lucu">Resmi tapi lucu</option>
+          <option value="Informal tapi serius">Informal tapi serius</option>
+          <option value="Penelitian ilmiah">Penelitian ilmiah</option>
+          <option value="Interaktif yang menghibur">Interaktif yang menghibur</option>
+          <option value="Kultwit yang kreatif">Kultwit yang kreatif</option>
+          <option value="Inspiratif dengan motivasi">Inspiratif dengan motivasi</option>
+          <option value="Ekspresif dan emosional">Ekspresif dan emosional</option>
+          <option value="Cerita personal">Cerita personal</option>
+          <option value="Edukasi dengan fakta">Edukasi dengan fakta</option>
+          <option value="Bisnis formal">Bisnis formal</option>
+          <option value="Teknis tapi mudah dipahami">Teknis tapi mudah dipahami</option>
+          <option value="Ramah kasual">Ramah kasual</option>
+          <option value="Promosional yang Subtil">Promosional yang Subtil</option>
+          <option value="Penyampaian cerita fakta">Penyampaian cerita fakta</option>
+          <option value="Serius dan formal">Serius dan formal</option>
+          <option value="Ringan tapi informatif">Ringan tapi informatif</option>
+          <option value="Visual dan deskriptif">Visual dan deskriptif</option>
+          <option value="Minimalis dan efektif">Minimalis dan efektif</option>
+          <option value="Informatif formal">Informatif formal</option>
+          <option value="Persuasif agresif">Persuasif agresif</option>
+        </select>
+      </div>
+
+      <!-- Author Style Selection -->
+      <div class="form-group">
+        <label for="author-style">Gaya Penulis:</label>
+        <select id="author-style" name="author-style" required>
+          <option value="">Pilih Gaya Penulis</option>
+          <option value="Fimela">Gaya author Fimela</option>
+          <option value="Hipwee">Gaya author Hipwee</option>
+          <option value="Dream">Gaya author Dream</option>
+          <option value="IDN Times">Gaya author IDN Times</option>
+          <option value="Katadata">Gaya author Katadata</option>
+          <option value="Kompas">Gaya author Kompas</option>
+          <option value="SindoNews">Gaya author SindoNews</option>
+          <option value="Liputan6">Gaya author Liputan6</option>
+          <option value="Kontan.co.id">Gaya author Kontan.co.id</option>
+          <option value="Raditya Dika">Gaya author Raditya Dika</option>
+          <option value="Dee Lestari">Gaya author Dee Lestari</option>
+          <option value="Ilana Tan">Gaya author Ilana Tan</option>
+          <option value="Leila S. Chudori">Gaya author Leila S. Chudori</option>
+          <option value="Tere Liye">Gaya author Tere Liye</option>
+          <option value="Pidi Baiq">Gaya author Pidi Baiq</option>
+          <option value="Eka Kurniawan">Gaya author Eka Kurniawan</option>
+          <option value="Andrea Hirata">Gaya author Andrea Hirata</option>
+          <option value="Sapardi Djoko Damono">Gaya author Sapardi Djoko Damono</option>
+          <option value="WS Rendra">Gaya author WS Rendra</option>
+          <option value="Fira Basuki">Gaya author Fira Basuki</option>
+          <option value="Raina Sia">Gaya author Raina Sia</option>
+        </select>
+      </div>
+
+      <!-- Additional Inputs -->
+      <div class="form-group">
+        <label for="about">Tentang:</label>
+        <textarea id="about" name="about" placeholder="Deskripsikan topik atau ide utama..." required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="area">Area:</label>
+        <input type="text" id="area" name="area" placeholder="Misalnya: Teknologi, Kesehatan, dll." required>
+      </div>
+      <div class="form-group">
+        <label for="word-count">Jumlah Kata:</label>
+        <input type="number" id="word-count" name="word-count" placeholder="Masukkan jumlah kata..." required>
+      </div>
+      <div class="form-group">
+        <label for="keywords">Kata Kunci:</label>
+        <input type="text" id="keywords" name="keywords" placeholder="Masukkan kata kunci, pisahkan dengan koma..." required>
+      </div>
+
+      <!-- Generate Button -->
+      <button type="submit" id="generate-prompt">Generate Prompt</button>
+    </form>
+
+    <!-- Generated Prompt Display -->
+    <div id="output" class="output hidden">
+      <h2>Prompt Anda:</h2>
+      <pre id="generated-prompt"></pre>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
