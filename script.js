@@ -12,10 +12,22 @@ document.getElementById('content-generator-form').addEventListener('submit', fun
 
   // Generate prompt
   const prompt = `
-    Buatkan saya ${category} ${style} dengan gaya penulisan ${authorStyle} tentang ${about} di ${area}, ${wordCount} kata dengan kata kunci ${keywords} 
+    Buatkan saya ${category} ${style} dengan gaya penulisan ${authorStyle} tentang ${about} di ${area}, ${wordCount} kata dengan kata kunci ${keywords}.
   `;
 
   // Display prompt
   document.getElementById('generated-prompt').textContent = prompt;
   document.getElementById('output').classList.remove('hidden');
+});
+
+// Copy to Clipboard Functionality
+document.getElementById('copy-button').addEventListener('click', function () {
+  const promptText = document.getElementById('generated-prompt').textContent;
+
+  // Use Clipboard API to copy text
+  navigator.clipboard.writeText(promptText).then(() => {
+    alert('Prompt berhasil disalin ke clipboard!');
+  }).catch((err) => {
+    console.error('Gagal menyalin teks: ', err);
+  });
 });
