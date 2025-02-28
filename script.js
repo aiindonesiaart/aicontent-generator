@@ -12,15 +12,7 @@ document.getElementById('content-generator-form').addEventListener('submit', fun
 
   // Generate prompt
   const prompt = `
-    Kategori: ${category}
-    Gaya Tulisan: ${style}
-    Gaya Penulis: ${authorStyle}
-    Tentang: ${about}
-    Area: ${area}
-    Jumlah Kata: ${wordCount}
-    Kata Kunci: ${keywords}
-
-    Silakan buat konten berdasarkan detail di atas.
+    Buatkan saya ${category} ${style} dengan gaya penulisan ${authorStyle} tentang ${about} di ${area}, ${wordCount} kata dengan kata kunci ${keywords} 
   `;
 
   // Display prompt
