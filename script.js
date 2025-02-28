@@ -11,9 +11,7 @@ document.getElementById('content-generator-form').addEventListener('submit', fun
   const keywords = document.getElementById('keywords').value;
 
   // Generate prompt
-  const prompt = `
-    Buatkan saya ${category} ${style} dengan gaya penulisan ${authorStyle} tentang ${about} di ${area}, ${wordCount} kata dengan kata kunci ${keywords}.
-  `;
+  const prompt = `Buatkan saya ${category} ${style} dengan gaya penulisan ${authorStyle} tentang ${about} di ${area}, ${wordCount} kata dengan kata kunci ${keywords}.`;
 
   // Display prompt
   document.getElementById('generated-prompt').textContent = prompt;
