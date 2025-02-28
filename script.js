@@ -7,12 +7,13 @@ document.getElementById('content-generator-form').addEventListener('submit', fun
   const authorStyle = document.getElementById('author-style').value;
   const about = document.getElementById('about').value;
   const area = document.getElementById('area').value;
+  const area2 = document.getElementById('area2').value;
   const wordCount = document.getElementById('word-count').value;
   const keywords = document.getElementById('keywords').value;
   const keywords2 = document.getElementById('keywords2').value;
 
   // Generate prompt
-  const prompt = `Buatkan saya ${category} ${style} ${authorStyle} tentang ${about} ${area} ${wordCount} ${keywords}, ${keywords2}.`;
+  const prompt = `Buatkan saya ${category} ${style} ${authorStyle} tentang ${about} ${area} ${area2} ${wordCount} ${keywords}, ${keywords2}.`;
 
   // Display prompt
   document.getElementById('generated-prompt').textContent = prompt;
