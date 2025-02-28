@@ -9,9 +9,10 @@ document.getElementById('content-generator-form').addEventListener('submit', fun
   const area = document.getElementById('area').value;
   const wordCount = document.getElementById('word-count').value;
   const keywords = document.getElementById('keywords').value;
+  const keywords2 = document.getElementById('keywords2').value;
 
   // Generate prompt
-  const prompt = `Buatkan saya ${category} ${style} dengan gaya penulisan ${authorStyle} tentang ${about} di ${area}, ${wordCount} kata dengan kata kunci ${keywords}.`;
+  const prompt = `Buatkan saya ${category} ${style} ${authorStyle} tentang ${about} ${area}, ${wordCount} ${keywords} ${keywords2}.`;
 
   // Display prompt
   document.getElementById('generated-prompt').textContent = prompt;
